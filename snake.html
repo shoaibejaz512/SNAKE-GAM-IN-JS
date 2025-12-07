@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game...</title>
+    <link rel="stylesheet" href="snake.css">
+</head>
+
+<body>
+    <main>
+        <div class="speed-snake">
+            <select name="snakeSpeed" id="speed">
+                <option value="2x">2x</option>
+                <option value="4x">4x</option>
+                <option value="6x">6x</option>
+                <option value="8x">8x</option>
+                <option value="10x">10x</option>
+            </select>
+        </div>
+        <div class="gameOverModel">
+            <div class="text-center">
+                <h4>Snake Game Over</h4>
+                <button id="restartBtn">Restart Game</button>
+            </div>
+        </div>
+        <section>
+            <div class="top-section-update">
+                <div class="high-score">
+                    <span>High Score : <span id="high_score"></span></span>
+                </div>
+                <div class="score">
+                    <span >Score : <span id="curr_score"></span></span>
+                </div>
+                <div class="time">
+                    <span>Time : <span id="time_update"></span> </span>
+                </div>
+            </div>
+            <div class="board"></div>
+        </section>
+        <div class="text-container">
+            <div class="text-center">
+                <h4>Welcome To The Snake Game</h4>
+                <button id="startBtn">Start Game</button>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
+
+    <script src="snake.js"></script>
+</body>
+
+</html>

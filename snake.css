@@ -1,0 +1,232 @@
+@font-face {
+    font-family: font1;
+    src: url("./font1.otf");
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: font1, sans-serif;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+:root {
+    /* for backgroud color  */
+    --bg-primary-color: #020617;
+    --bg-secondary-color: #09090b;
+    --bg-food-color: #e11d48;
+    --bg-snake-color: #7c3aed;
+
+    /* borer color  */
+    --border-primary-color: #e2e8f0;
+    --border-secondary-color: #f0f0f0;
+
+
+    /* for spacing  */
+    --space-3xl: 30px;
+    --space-2xl: 20px;
+    --spave-1xl: 10px;
+    --space-md: 8px;
+    --space-lg: 50px;
+    --space-sm: 5px;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-primary-color);
+    padding: var(--space-2xl);
+}
+
+
+.top-section-update {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-3xl);
+}
+
+.top-section-update .high-score,
+.score,
+.time {
+    padding: var(--space-md);
+    width: 200px;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: white;
+}
+
+.board {
+    border: 1px solid var(--border-secondary-color);
+    border-radius: 5px;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
+}
+
+.text-container {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    background-color: #09090b87;
+    backdrop-filter: blur(3px);
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container .text-center {
+    width: 600px;
+    height: 200px;
+    background-color: var(--bg-primary-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.text-center h4 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.text-center button {
+    margin-top: 20px;
+    padding: 15px 60px;
+    color: white;
+    font-weight: bolder;
+    background-color: #059669;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.fill {
+    background-color: var(--bg-snake-color);
+    border-radius: 50%;
+}
+
+.food {
+    background-color: var(--bg-food-color);
+    border-radius: 50%;
+}
+
+.gameOverModel {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #09090b87;
+    backdrop-filter: blur(3px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameOverModel .text-center {
+    width: 600px;
+    height: 200px;
+    background-color: var(--bg-primary-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.gameOverModel .text-center h4 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.gameOverModel .text-center button {
+    margin-top: 20px;
+    padding: 15px 60px;
+    color: white;
+    font-weight: bolder;
+    background-color: #059669;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.speed-snake {
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+    top: 80%;
+    right: 5%;
+}
+
+#speed {
+    color: #f0f0f0;
+    font-weight: bolder;
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 0px 20px;
+    background-color: rgba(0, 0, 0, 0.376);
+    justify-content: center;
+    align-items: center;
+}
+#speed option{
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #020617;
+}
+.bonus{
+    border-radius: 50%;
+    background-color: rgb(18, 220, 18);
+    transition: all .3s cubic-bezier(0.19, 1, 0.22, 1) ;
+    animation: bounce .8s infinite;
+}
+@keyframes bounce {
+    0%{
+        scale: .8;
+    }50%{
+        scale: 1.2;
+    }100%{
+        scale: 1;
+    }
+}
+
+
