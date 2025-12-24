@@ -4,6 +4,10 @@ A modern and interactive version of the classic Snake Game, built with smooth co
 
 🚀 Simple. Smooth. Classic.
 
+  LIVE DEMO 
+  https://shoaib-snake-game.netlify.app
+
+
 🎮 Features
 
 Smooth and responsive snake movement
