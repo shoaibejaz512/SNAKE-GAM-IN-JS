@@ -178,6 +178,7 @@ function render() {
     if (head.x === bonus.x && head.y === bonus.y) {
 
         score += 50;
+        ScoreDiv.innerText = score;
         SnakeBiteSound.play();
 
         // Remove old bonus
